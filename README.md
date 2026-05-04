@@ -2,7 +2,7 @@
 
 Pipeline Big Data complet pour la recommandation intelligente de cryptomonnaies en temps réel. Le système collecte des données de marché via des APIs, les traite en streaming avec Apache Spark, applique des modèles de Machine Learning (MLP, LSTM, Random Forest) et visualise les résultats dans un dashboard Grafana interactif.
 
-![Architecture du Pipeline](docs/architecture.png)
+
 
 ##  Fonctionnalités
 
@@ -15,12 +15,7 @@ Pipeline Big Data complet pour la recommandation intelligente de cryptomonnaies 
 -  **Déploiement Docker** — Infrastructure complète conteneurisée via docker-compose
 
 ##  Architecture du Pipeline
-┌─────────────┐     ┌──────────┐     ┌──────────────┐     ┌───────────┐     ┌─────────┐
-│  APIs       │───▶│  Kafka   │────▶│ PySpark      │───▶│ Cassandra │────▶│ Grafana │
-│  (CoinGecko │     │ (Topics) │     │ Streaming +  │     │ (NoSQL)   │     │ (UI)    │
-│   Binance)  │     │          │     │  Modèles ML) │     │           │     │         │
-└─────────────┘     └──────────┘     └──────────────┘     └───────────┘     └─────────┘
-
+<img width="1471" height="582" alt="image" src="https://github.com/user-attachments/assets/e045c00d-4f0a-409d-84b9-226023bac1e5" />
 
 ### Étapes détaillées :
 
